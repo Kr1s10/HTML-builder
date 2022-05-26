@@ -10,7 +10,7 @@ const pathToFolder = path.join(__dirname, 'secret-folder');
         const ext = path.extname(file.name);
         const stats = await fs.stat(path.join(pathToFolder, file.name));
         console.log(
-          `${path.basename(file.name, ext)} - ${ext} - ${(stats.size / 1024).toFixed(3)}kb`
+          `${path.basename(file.name, ext)} - ${ext.slice(1)} - ${(stats.size / 1024).toFixed(3)}kb`
         );
       }
     }
